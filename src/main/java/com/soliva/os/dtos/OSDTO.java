@@ -3,6 +3,7 @@ package com.soliva.os.dtos;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.soliva.os.domain.OS;
 
+import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
@@ -19,6 +20,7 @@ public class OSDTO implements Serializable {
 
     private Integer prioridade;
 
+    @NotEmpty(message = "O campo observações é requerido")
     private String observacoes;
 
     private Integer status;
